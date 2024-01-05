@@ -19,7 +19,9 @@ function Contact() {
         }
         emailjs.sendForm(import.meta.env.VITE_SERVICE, import.meta.env.VITE_TEMPLATE, form.current, import.meta.env.VITE_PUBLIC)
           .then((result) => {
-              console.log(result.text);
+            console.log(result.text);
+            toast.success("Message sent successfully!");
+            form.current.reset();
 
           }, (error) => {
               console.log(error.text);
