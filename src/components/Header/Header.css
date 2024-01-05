@@ -1,0 +1,20 @@
+.molecule {
+    /* Estilos para la molécula, incluyendo la animación */
+    animation: growShrink 5s infinite;
+}
+
+@keyframes growShrink {
+    0%, 100% {
+        transform: scale(0.7);
+    }
+    50% {
+        transform: scale(0.9);
+    }
+}
+
+@media (min-width: 1024px) {
+    .molecule img {
+        width: 400px; /* Tamaño más grande para desktop */
+        height: 400px;
+    }
+}
